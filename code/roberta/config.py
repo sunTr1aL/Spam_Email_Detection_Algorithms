@@ -1,14 +1,25 @@
-# config.py
+import os
+import torch
 
-DATA_DIR = "./data/processed"
-OUTPUT_DIR = "./experiments_roberta"
+# Paths
+DATA_DIR = os.path.abspath("../../data/processed_data")  # Project/data/processed_data/
+OUTPUT_DIR = os.path.abspath("../../roberta")  # Project/roberta/
 
-DATASETS = ["spam_assassin", "enron", "trec2007"]
+# Datasets
+DATASETS = ["enron", "spam_assassin", "trec2007"]
 
+# Hyperparameters
 MODEL_NAME = "roberta-base"
 SEED = 42
-TRAIN_RATIO = 0.8
 EPOCHS = 3
-BATCH_SIZE = 24
-LEARNING_RATE = 2e-5
+BATCH_SIZE = 64
+LEARNING_RATE = 5e-5
+WEIGHT_DECAY = 0.01
 MAX_LENGTH = 256
+TRAIN_RATIO = 0.8
+
+# Device
+DEVICE_STR = "cuda" if torch.cuda.is_available() else "cpu"
+DEVICE = torch.device(DEVICE_STR)
+
+os.makedirs(OUTPUT_DIR, exist_ok=True)

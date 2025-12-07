@@ -1,8 +1,8 @@
-# evaluator.py
-
-import torch
-import pandas as pd
 import matplotlib.pyplot as plt
+import os
+import pandas as pd
+import seaborn as sns
+import torch
 
 from sklearn.metrics import (
     accuracy_score,
@@ -10,38 +10,66 @@ from sklearn.metrics import (
     confusion_matrix,
 )
 
+from config import *
 
-def evaluate_and_save(model, tokenizer, df_test, device, out_dir, tag):
+
+def evaluate_and_save(model, tokenizer, test_df, sub_dir, tag):
+    """
+    Evaluates model on test_df, saves metrics.csv and confusion_matrix.png
+    """
+    os.makedirs(sub_dir, exist_ok=True)
+
     model.eval()
-    texts = df_test["text_clean"].values
-    labels = df_test["label"].astype(int).values
 
-    preds, probs = [], []
-    for text in texts:
-        enc = tokenizer(text, truncation=True, max_length=256, return_tensors="pt")
-        enc = {k: v.to(device) for k, v in enc.items()}
+    # Batch evaluation to avoid OOM on large test sets
+    texts = test_df["text_clean"].tolist()
+    labels = test_df["label"].tolist()
+
+    all_preds = []
+    all_probs = []
+
+    # Simple batching for inference
+    batch_size = BATCH_SIZE * 2
+    for i in range(0, len(texts), batch_size):
+        batch_texts = texts[i : i + batch_size]
+        inputs = tokenizer(
+            batch_texts,
+            truncation=True,
+            padding=True,
+            max_length=MAX_LENGTH,
+            return_tensors="pt",
+        )
+        inputs = {k: v.to(DEVICE) for k, v in inputs.items()}
+
         with torch.no_grad():
-            out = model(**enc)
-            p = torch.softmax(out.logits, dim=1)
-            prob = p[:, 1].item()
-            pred = p.argmax(dim=1).item()
-        preds.append(pred)
-        probs.append(prob)
+            outputs = model(**inputs)
+            # Softmax output layer as requested
+            probs = torch.softmax(outputs.logits, dim=1)
+            preds = torch.argmax(probs, dim=1)
 
-    acc = accuracy_score(labels, preds)
+            all_preds.extend(preds.cpu().numpy())
+            all_probs.extend(probs[:, 1].cpu().numpy())
+
+    # Save Metrics
+    acc = accuracy_score(labels, all_preds)
     p, r, f1, _ = precision_recall_fscore_support(
-        labels, preds, average="binary", zero_division=0
+        labels, all_preds, average="binary", zero_division=0
     )
-    cm = confusion_matrix(labels, preds)
 
-    metrics = pd.DataFrame([{"acc": acc, "prec": p, "recall": r, "f1": f1}])
-    metrics.to_csv(f"{out_dir}/metrics_{tag}.csv", index=False)
+    metrics_path = os.path.join(sub_dir, f"metrics_{tag}.csv")
+    pd.DataFrame(
+        [{"dataset": tag, "accuracy": acc, "precision": p, "recall": r, "f1": f1}]
+    ).to_csv(metrics_path, index=False)
 
-    fig, ax = plt.subplots()
-    ax.imshow(cm, cmap="Blues")
-    ax.set_title(f"Confusion Matrix {tag}")
-    for i in range(2):
-        for j in range(2):
-            ax.text(j, i, cm[i, j], ha="center", va="center")
-    plt.savefig(f"{out_dir}/cm_{tag}.png")
+    print(f"  -> {tag}: F1={f1:.4f}, Acc={acc:.4f} saved to {sub_dir}")
+
+    # Plot Confusion Matrix
+    cm = confusion_matrix(labels, all_preds)
+    plt.figure(figsize=(6, 5))
+    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", cbar=False)
+    plt.title(f"Confusion Matrix: {tag}")
+    plt.xlabel("Predicted")
+    plt.ylabel("Actual")
+    plt.tight_layout()
+    plt.savefig(os.path.join(sub_dir, f"cm_{tag}.png"))
     plt.close()
