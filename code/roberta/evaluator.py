@@ -58,7 +58,16 @@ def evaluate_and_save(model, tokenizer, test_df, sub_dir, tag):
 
     metrics_path = os.path.join(sub_dir, f"metrics_{tag}.csv")
     pd.DataFrame(
-        [{"dataset": tag, "accuracy": acc, "precision": p, "recall": r, "f1": f1}]
+        [
+            {
+                "dataset": tag,
+                "accuracy": acc,
+                "precision": p,
+                "recall": r,
+                "f1": f1,
+                "size": len(test_df),
+            }
+        ]
     ).to_csv(metrics_path, index=False)
 
     print(f"  -> {tag}: F1={f1:.4f}, Acc={acc:.4f} saved to {sub_dir}")

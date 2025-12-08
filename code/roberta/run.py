@@ -1,16 +1,18 @@
+import os
 import numpy as np
 import random
 import torch
 
 from transformers import logging
 
+# suppress warnings
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+logging.set_verbosity_error()
+
 from config import *
 from dataset import load_dataset, get_splits
 from trainer import train_engine
 from evaluator import evaluate_and_save
-
-# Suppress warnings for cleaner output
-logging.set_verbosity_error()
 
 
 def set_seed(seed):
@@ -54,14 +56,17 @@ def main():
     print("\n========== Experiment 1 & 2: In-Domain (Random & Time) ==========")
     for name, df in dfs.items():
         for mode in ["random", "time"]:
-            if name == "trec2007" and mode == "time":
+            if name != "enron" and mode == "time":
                 continue
 
             tag = f"{name}_{mode}"
             print(f"\n--- Processing {tag}")
 
             train_df, test_df = get_splits(df, mode=mode, train_ratio=0.8)
-            out_path = os.path.join(OUTPUT_DIR, "in_domain")
+            if mode == "random":
+                out_path = os.path.join(OUTPUT_DIR, "random_split")
+            elif mode == "time":
+                out_path = os.path.join(OUTPUT_DIR, "time_split")
 
             run_experiment(train_df, test_df, out_path, tag)
 

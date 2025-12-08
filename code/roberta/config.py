@@ -3,7 +3,7 @@ import torch
 
 # Paths
 DATA_DIR = os.path.abspath("../../data/processed_data")  # Project/data/processed_data/
-OUTPUT_DIR = os.path.abspath("../../roberta")  # Project/roberta/
+OUTPUT_DIR = os.path.abspath("../../roberta_output")  # Project/roberta_output/
 
 # Datasets
 DATASETS = ["enron", "spam_assassin", "trec2007"]
@@ -12,7 +12,7 @@ DATASETS = ["enron", "spam_assassin", "trec2007"]
 MODEL_NAME = "roberta-base"
 SEED = 42
 EPOCHS = 3
-BATCH_SIZE = 64
+BATCH_SIZE = 128
 LEARNING_RATE = 5e-5
 WEIGHT_DECAY = 0.01
 MAX_LENGTH = 256
