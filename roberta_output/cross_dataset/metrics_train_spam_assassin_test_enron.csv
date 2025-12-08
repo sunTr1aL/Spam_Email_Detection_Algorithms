@@ -1,0 +1,2 @@
+dataset,accuracy,precision,recall,f1,size
+train_spam_assassin_test_enron,0.6243079200592154,0.5876747141041931,0.8652440806781643,0.6999456123341767,33775

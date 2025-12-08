@@ -1,0 +1,2 @@
+dataset,accuracy,precision,recall,f1,size
+spam_assassin_ratio_0.1,0.673058485139022,0.0,0.0,0.0,5215
