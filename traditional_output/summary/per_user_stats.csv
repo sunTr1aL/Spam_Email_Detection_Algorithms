@@ -1,0 +1,196 @@
+user_id,n,prec,recall,f1
+Manager <manager@speedy.uwaterloo.ca>,10,1.0,1.0,1.0
+<manager@flax9.uwaterloo.ca>,111,1.0,1.0,1.0
+Snozzled <snozzled@flax24.uwaterloo.ca>,21,1.0,1.0,1.0
+Smiles <smiles@speedy.uwaterloo.ca>,13,1.0,1.0,1.0
+Smiles <smiles@flax9.uwaterloo.ca>,21,1.0,1.0,1.0
+producttestpanel@flax9.uwaterloo.ca,167,1.0,1.0,1.0
+producttestpanel@speedy.uwaterloo.ca,85,1.0,1.0,1.0
+refinance@flax24.uwaterloo.ca,17,1.0,1.0,1.0
+Netsearch <netsearch@canola1.uwaterloo.ca>,11,1.0,1.0,1.0
+Myrtless <myrtless@flax24.uwaterloo.ca>,22,1.0,1.0,1.0
+Mail <mail@flax9.uwaterloo.ca>,15,1.0,1.0,1.0
+Ktwarwic <ktwarwic@flax9.uwaterloo.ca>,14,1.0,1.0,1.0
+Kedda <kedda@flax24.uwaterloo.ca>,30,1.0,1.0,1.0
+Gnitpick <gnitpick@flax9.uwaterloo.ca>,13,1.0,1.0,1.0
+Gnitpick <gnitpick@flax24.uwaterloo.ca>,24,1.0,1.0,1.0
+Captains <captains@flax24.uwaterloo.ca>,19,1.0,1.0,1.0
+Acm <the00@plg2.math.uwaterloo.ca>,20,1.0,1.0,1.0
+Acm <the00@plg.uwaterloo.ca>,22,1.0,1.0,1.0
+<warwick@plg.uwaterloo.ca>,22,1.0,1.0,1.0
+<theorize@speedy.uwaterloo.ca>,12,1.0,1.0,1.0
+<the00@plg.uwaterloo.ca>,388,1.0,1.0,1.0
+<smiles@speedy.uwaterloo.ca>,45,1.0,1.0,1.0
+<smiles@flax9.uwaterloo.ca>,105,1.0,1.0,1.0
+<smile@flax9.uwaterloo.ca>,10,1.0,1.0,1.0
+<shoppersavingsenter.net@speedy.uwaterloo.ca>,11,1.0,1.0,1.0
+<ramiro@flax9.uwaterloo.ca>,11,1.0,1.0,1.0
+simpsons@flax24.uwaterloo.ca,11,1.0,1.0,1.0
+<producttestpanel@speedy.uwaterloo.ca>,53,1.0,1.0,1.0
+<netsearch@canola1.uwaterloo.ca>,35,1.0,1.0,1.0
+<mhln@mhln.com>,46,1.0,1.0,1.0
+<mhln@mhlearningnetwork.com>,35,1.0,1.0,1.0
+Theorize <theorize@plg.uwaterloo.ca>,29,1.0,1.0,1.0
+Wisdom <wisdom@flax24.uwaterloo.ca>,24,1.0,1.0,1.0
+adf adf <funnyreign@speedy.uwaterloo.ca>,11,1.0,1.0,1.0
+elaastic@flax9.uwaterloo.ca,48,1.0,1.0,1.0
+mack@flax9.uwaterloo.ca,24,1.0,1.0,1.0
+mack5@flax9.uwaterloo.ca,10,1.0,1.0,1.0
+mail@speedy.uwaterloo.ca,70,1.0,1.0,1.0
+manager@flax9.uwaterloo.ca,108,1.0,1.0,1.0
+kedda@flax24.uwaterloo.ca,25,1.0,1.0,1.0
+kahlia@flax9.uwaterloo.ca,10,1.0,1.0,1.0
+jjosh@flax9.uwaterloo.ca,18,1.0,1.0,1.0
+jegdcorxchqgnitpick@flax9.uwaterloo.ca,11,1.0,1.0,1.0
+"manager@flax9.uwaterloo.ca, mail@flax9.uwaterloo.ca,
+   ktwarwic@flax9.uwaterloo.ca",10,1.0,1.0,1.0
+gnitpick@speedy.uwaterloo.ca,190,1.0,1.0,1.0
+gjditchf@plg.uwaterloo.ca,59,1.0,1.0,1.0
+fantasy@flax9.uwaterloo.ca,11,1.0,1.0,1.0
+elaastic@speedy.uwaterloo.ca,13,1.0,1.0,1.0
+dmason@plg.uwaterloo.ca,18,1.0,1.0,1.0
+almer@flax24.uwaterloo.ca,18,1.0,1.0,1.0
+deficient@flax9.uwaterloo.ca,21,1.0,1.0,1.0
+manager@speedy.uwaterloo.ca,90,1.0,1.0,1.0
+mhln@mhlearningnetwork.com,66,1.0,1.0,1.0
+mhln@mhln.com,17,1.0,1.0,1.0
+miles@flax9.uwaterloo.ca,11,1.0,1.0,1.0
+cruiseca@speedy.uwaterloo.ca,26,1.0,1.0,1.0
+chortled@plg.uwaterloo.ca,11,1.0,1.0,1.0
+catchall@flax9.uwaterloo.ca,62,1.0,1.0,1.0
+captains@flax24.uwaterloo.ca,59,1.0,1.0,1.0
+opt2@flax9.uwaterloo.ca,19,1.0,1.0,1.0
+opt4@flax9.uwaterloo.ca,11,1.0,1.0,1.0
+avcooper@speedy.uwaterloo.ca,15,1.0,1.0,1.0
+antelopehn@flax9.uwaterloo.ca,11,1.0,1.0,1.0
+<manager@speedy.uwaterloo.ca>,75,1.0,1.0,1.0
+<smile@speedy.uwaterloo.ca>,11,1.0,1.0,1.0
+<mail@speedy.uwaterloo.ca>,70,1.0,1.0,1.0
+"""catchall"" <catchall@speedy.uwaterloo.ca>",28,1.0,1.0,1.0
+<9ec06fdb@flax9.uwaterloo.ca>,12,1.0,1.0,1.0
+<9da6ce2e@flax9.uwaterloo.ca>,12,1.0,1.0,1.0
+<1@speedy.uwaterloo.ca>,10,1.0,1.0,1.0
+<1@flax9.uwaterloo.ca>,32,1.0,1.0,1.0
+9ec06fdb@flax9.uwaterloo.ca,17,1.0,1.0,1.0
+<mail@flax9.uwaterloo.ca>,110,1.0,1.0,1.0
+"""the00"" <the00@plg2.math.uwaterloo.ca>",71,1.0,1.0,1.0
+"""the00"" <the00@plg.uwaterloo.ca>",108,1.0,1.0,1.0
+"""mhln"" <mhln@mhln.com>",37,1.0,1.0,1.0
+"""mhln"" <mhln@mhlearningnetwork.com>",17,1.0,1.0,1.0
+"""manager"" <manager@speedy.uwaterloo.ca>",31,1.0,1.0,1.0
+"""mail"" <mail@speedy.uwaterloo.ca>",16,1.0,1.0,1.0
+"""ktwarwic"" <ktwarwic@speedy.uwaterloo.ca>",46,1.0,1.0,1.0
+"""gnitpick"" <gnitpick@speedy.uwaterloo.ca>",58,1.0,1.0,1.0
+"""Theorize"" <theorize@plg.uwaterloo.ca>",30,1.0,1.0,1.0
+<avcooper@flax9.uwaterloo.ca>,47,1.0,1.0,1.0
+"""Subscriber"" <producttestpanel@speedy.uwaterloo.ca>",44,1.0,1.0,1.0
+"""Subscriber"" <producttestpanel@flax9.uwaterloo.ca>",92,1.0,1.0,1.0
+"""Soundtrackdeficient"" <soundtrackdeficient@flax9.uwaterloo.ca>",10,1.0,1.0,1.0
+"""Smiles"" <smiles@flax9.uwaterloo.ca>",16,1.0,1.0,1.0
+"""Sktwarwic"" <sktwarwic@flax9.uwaterloo.ca>",10,1.0,1.0,1.0
+"""Netsearch"" <netsearch@canola1.uwaterloo.ca>",13,1.0,1.0,1.0
+"""Mail"" <mail@flax9.uwaterloo.ca>",11,1.0,1.0,1.0
+"""Ktwarwic"" <ktwarwic@flax9.uwaterloo.ca>",12,1.0,1.0,1.0
+"""Gnitpick"" <gnitpick@speedy.uwaterloo.ca>",11,1.0,1.0,1.0
+"""Gnitpick"" <gnitpick@flax9.uwaterloo.ca>",12,1.0,1.0,1.0
+the00@flax9.uwaterloo.ca,21,1.0,1.0,1.0
+the00@speedy.uwaterloo.ca,15,1.0,1.0,1.0
+theorize@flax9.uwaterloo.ca,13,1.0,1.0,1.0
+undisclosed-recipients:;,31,1.0,1.0,1.0
+<antelopehn@flax9.uwaterloo.ca>,19,1.0,1.0,1.0
+"""theorize"" <theorize@plg.uwaterloo.ca>",161,1.0,1.0,1.0
+<avcooper@speedy.uwaterloo.ca>,12,1.0,1.0,1.0
+<chortlede@plg.uwaterloo.ca>,11,1.0,1.0,1.0
+<mack@speedy.uwaterloo.ca>,17,1.0,1.0,1.0
+<mack@flax9.uwaterloo.ca>,41,1.0,1.0,1.0
+<ktwarwic@speedy.uwaterloo.ca>,148,1.0,1.0,1.0
+smiles@flax9.uwaterloo.ca,118,1.0,1.0,1.0
+<kedda@flax24.uwaterloo.ca>,26,1.0,1.0,1.0
+<jjosh@speedy.uwaterloo.ca>,11,1.0,1.0,1.0
+<gnitpick@speedy.uwaterloo.ca>,138,1.0,1.0,1.0
+<faisalabad@speedy.uwaterloo.ca>,10,1.0,1.0,1.0
+<elaastic@speedy.uwaterloo.ca>,41,1.0,1.0,1.0
+<elaastic@flax9.uwaterloo.ca>,18,1.0,1.0,1.0
+<deficient@speedy.uwaterloo.ca>,11,1.0,1.0,1.0
+<deficient@flax9.uwaterloo.ca>,12,1.0,1.0,1.0
+mack@speedy.uwaterloo.ca,11,1.0,1.0,1.0
+snozzled@flax24.uwaterloo.ca,14,1.0,1.0,1.0
+<captains@flax24.uwaterloo.ca>,27,1.0,1.0,1.0
+smiles@speedy.uwaterloo.ca,46,1.0,1.0,1.0
+<chortled@plg.uwaterloo.ca>,21,1.0,1.0,1.0
+<catchall@speedy.uwaterloo.ca>,55,1.0,1.0,1.0
+<catchall@flax9.uwaterloo.ca>,73,1.0,1.0,1.0
+theorize@plg.uwaterloo.ca,408,1.0,0.9975490196078431,0.9987730061349693
+<the00@plg2.math.uwaterloo.ca>,216,1.0,0.9953703703703703,0.9976798143851509
+gnitpick@flax9.uwaterloo.ca,414,0.9975786924939467,0.9975786924939467,0.9975786924939467
+the00@plg2.math.uwaterloo.ca,188,1.0,0.9946808510638298,0.9973333333333333
+<theorize@plg.uwaterloo.ca>,420,1.0,0.9928571428571429,0.996415770609319
+the00@plg.uwaterloo.ca,384,1.0,0.9921875,0.996078431372549
+<gnitpick@flax9.uwaterloo.ca>,202,1.0,0.9900990099009901,0.9950248756218906
+mail@flax9.uwaterloo.ca,66,1.0,0.9848484848484849,0.9923664122137404
+<ktwarwic@flax9.uwaterloo.ca>,229,0.9929078014184397,0.9859154929577465,0.9893992932862191
+catchall@speedy.uwaterloo.ca,44,1.0,0.9772727272727273,0.9885057471264368
+ktwarwic@speedy.uwaterloo.ca,186,0.9764705882352941,1.0,0.988095238095238
+ktwarwic@flax9.uwaterloo.ca,438,0.974025974025974,1.0,0.9868421052631579
+nan,216,0.970873786407767,1.0,0.9852216748768473
+netsearch@canola1.uwaterloo.ca,24,1.0,0.9583333333333334,0.9787234042553191
+"""Subscriber"" <cruiseca@flax9.uwaterloo.ca>",24,1.0,0.9583333333333334,0.9787234042553191
+avcooper@flax9.uwaterloo.ca,53,0.6363636363636364,1.0,0.7777777777777778
+<reform@meerschwein.hh.schule.de>,12,0.3333333333333333,1.0,0.5
+reform@meerschwein.hh.schule.de,14,0.2727272727272727,0.75,0.39999999999999997
+r-help@stat.math.ethz.ch,413,0.0,0.0,0.0
+tridge@samba.org,15,0.0,0.0,0.0
+simo <idra@samba.org>,15,0.0,0.0,0.0
+parrotbug-followup@parrotcode.org,10,0.0,0.0,0.0
+perl6-internals@perl.org,73,0.0,0.0,0.0
+r-help <r-help@stat.math.ethz.ch>,12,0.0,0.0,0.0
+msn-list@te.verweg.com,14,0.0,0.0,0.0
+samba-technical@lists.samba.org,62,0.0,0.0,0.0
+perl6-language@perl.org,59,0.0,0.0,0.0
+speakup@braille.uwo.ca,39,0.0,0.0,0.0
+sugar@laptop.org,27,0.0,0.0,0.0
+samba-cvs@lists.samba.org,22,0.0,0.0,0.0
+samba-cvs@samba.org,452,0.0,0.0,0.0
+samba-technical@samba.org,27,0.0,0.0,0.0
+  ,93,0.0,0.0,0.0
+ktwarwic@flax9.UWATERLOO.CA,81,0.0,0.0,0.0
+Jeremy Allison <jra@samba.org>,25,0.0,0.0,0.0
+IP-Health <ip-health@lists.essential.org>,10,0.0,0.0,0.0
+BREAKINGNEWS Subscribers<BREAKINGNEWS-Subscribers@foxnews.com>,59,0.0,0.0,0.0
+Andrew Bartlett <abartlet@samba.org>,10,0.0,0.0,0.0
+<r-help@stat.math.ethz.ch>,80,0.0,0.0,0.0
+<ktwarwic@flax9.UWATERLOO.CA>,13,0.0,0.0,0.0
+<beginners@perl.org>,21,0.0,0.0,0.0
+<avcoopers@flax9.uwaterloo.ca>,11,0.0,0.0,0.0
+"""Stefan (metze) Metzmacher"" <metze@samba.org>",10,0.0,0.0,0.0
+"""Speakup is a screen review system for Linux."" <speakup@braille.uwo.ca>",194,0.0,0.0,0.0
+"""Gerald (Jerry) Carter"" <jerry@samba.org>",29,0.0,0.0,0.0
+"""Andrew Coopers"" <avcoopers@flax9.uwaterloo.ca>",15,0.0,0.0,0.0
+"""Andrew Coopers"" <avcooper@speedy.uwaterloo.ca>",18,0.0,0.0,0.0
+"""Andrew Coopers"" <avcooper@flax9.uwaterloo.ca>",57,0.0,0.0,0.0
+"""=?iso-8859-1?Q?ktwarwic@speedy=2Euwaterloo=2Eca=20?="" <ktwarwic@speedy.uwaterloo.ca>",12,0.0,0.0,0.0
+"""=?iso-8859-1?Q?ktwarwic@speedy=2Euwaterloo=2Eca=20?="" <ktwarwic@flax9.uwaterloo.ca>",41,0.0,0.0,0.0
+"""'Speakup is a screen review system for Linux.'"" <speakup@braille.uwo.ca>",11,0.0,0.0,0.0
+ prs_struct *ps,11,0.0,0.0,0.0
+James Peach <jpeach@samba.org>,17,0.0,0.0,0.0
+ int depth);,36,0.0,0.0,0.0
+ktwarwic@SPEEDY.UWATERLOO.CA,31,0.0,0.0,0.0
+None,696,0.0,0.0,0.0
+ip-health@lists.essential.org,37,0.0,0.0,0.0
+debian-mirrors@lists.debian.org,14,0.0,0.0,0.0
+debian-legal@lists.debian.org,100,0.0,0.0,0.0
+debian-laptop@lists.debian.org,54,0.0,0.0,0.0
+"debian-devel@lists.debian.org, debian-legal@lists.debian.org",13,0.0,0.0,0.0
+debian-desktop@lists.debian.org,17,0.0,0.0,0.0
+chromatic <chromatic@wgz.org>,14,0.0,0.0,0.0
+cc-community@lists.ibiblio.org,27,0.0,0.0,0.0
+bugs-bitbucket@netlabs.develooper.com,67,0.0,0.0,0.0
+"beginners@perl.org, perl-beginners@moderators.isc.org",22,0.0,0.0,0.0
+beginners@perl.org,139,0.0,0.0,0.0
+"a2k@lists.essential.org, ip-health@lists.essential.org",10,0.0,0.0,0.0
+Volker.Lendecke@SerNet.DE,19,0.0,0.0,0.0
+R-help@stat.math.ethz.ch,33,0.0,0.0,0.0
+R-help <r-help@stat.math.ethz.ch>,12,0.0,0.0,0.0
+Prof Brian Ripley <ripley@stats.ox.ac.uk>,11,0.0,0.0,0.0
+Perl Beginners <beginners@perl.org>,22,0.0,0.0,0.0
+yitzle <yitzle@users.sourceforge.net>,10,0.0,0.0,0.0

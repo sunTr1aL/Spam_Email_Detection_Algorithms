@@ -117,7 +117,7 @@ def load_clean_csv(name: str) -> pd.DataFrame:
 
 
 def tokenize_dataset(ds: Dataset) -> Dataset:
-    """Tokenize a HF Dataset with columns: 'text_clean', 'label'."""
+    # Tokenize a HF Dataset using DistilBERT tokenizer
     return ds.map(
         lambda batch: tokenizer(
             batch["text_clean"],
@@ -146,7 +146,7 @@ def make_lora_model(num_labels: int = 2):
         lora_alpha=16,
         lora_dropout=0.1,
         bias="none",
-        target_modules=["q_lin", "v_lin"],  # <-- important line
+        target_modules=["q_lin", "v_lin"],
     )
 
     model = get_peft_model(base_model, lora_config)
@@ -160,7 +160,7 @@ def make_lora_model(num_labels: int = 2):
 
 # ========= VISUALIZATION =========
 def save_confusion_matrix(cm: np.ndarray, tag: str, cm_dir: str):
-    """Save a confusion matrix PNG for Ham(0)/Spam(1), in the given directory."""
+    # Save confusion matrix as an image
     fig, ax = plt.subplots()
     ax.imshow(cm, cmap="Blues")
     ax.set_title(f"Confusion Matrix [{tag} | DistilBERT+LoRA]")
@@ -182,7 +182,7 @@ def save_confusion_matrix(cm: np.ndarray, tag: str, cm_dir: str):
     print(f"  Saved confusion matrix -> {out_path}")
 
 
-# ========= CORE TRAIN + EVAL WRAPPER =========
+# ========= TRAIN + EVAL WRAPPER =========
 def train_eval_lora(
     train_df: pd.DataFrame,
     test_df: pd.DataFrame,
@@ -195,8 +195,7 @@ def train_eval_lora(
     train_frac_total: float,  # fraction of the TOTAL source dataset used (0-1)
     cm_dir: str,
 ):
-    """Train DistilBERT+LoRA on train_df, evaluate on test_df and return metrics row."""
-
+    # Train DistilBERT+LoRA on train_df, evaluate on test_df and return metrics row
     print(f"\n--- DistilBERT+LoRA [{exp_group} | {tag}] ---")
     print(f"  train samples = {len(train_df)}, test samples = {len(test_df)}")
     print(f"  train_frac_pool={train_frac_pool:.3f}, train_frac_total={train_frac_total:.3f}")
@@ -278,7 +277,6 @@ def train_eval_lora(
 
 # ========= EXPERIMENT 1: BASELINE (RANDOM SPLIT) =========
 def run_baseline_experiments(data_dict, test_size: float = 0.2):
-    """Random train/test split on each dataset separately."""
     results = []
     for name in ["spam_assassin", "enron", "trec2007", "combined"]:
         df = data_dict[name]
@@ -291,7 +289,7 @@ def run_baseline_experiments(data_dict, test_size: float = 0.2):
             random_state=SEED,
         )
 
-        train_frac_pool = len(train_df) / source_n  # here pool == total
+        train_frac_pool = len(train_df) / source_n
         train_frac_total = train_frac_pool
 
         tag = f"{name}_rand"
@@ -313,7 +311,7 @@ def run_baseline_experiments(data_dict, test_size: float = 0.2):
 
 # ========= EXPERIMENT 2: CROSS-DATASET =========
 def run_cross_dataset_experiments(data_dict):
-    """Train on one dataset, test on the other two."""
+    # Train on one dataset, test on the other two
     results = []
     names = ["spam_assassin", "enron", "trec2007"]
 
@@ -321,7 +319,7 @@ def run_cross_dataset_experiments(data_dict):
         train_source = data_dict[train_name]
         source_n = len(train_source)
         train_df = train_source  # use full dataset
-        train_frac_pool = len(train_df) / source_n  # == 1.0
+        train_frac_pool = len(train_df) / source_n
         train_frac_total = train_frac_pool
 
         for test_name in names:
@@ -347,7 +345,7 @@ def run_cross_dataset_experiments(data_dict):
 
 # ========= EXPERIMENT 3: TIME-AWARE =========
 def run_time_aware_experiments(data_dict, test_size: float = 0.2):
-    """Train on earlier emails, test on later emails."""
+    # Train on earlier emails, test on later emails
     results = []
     for name in ["spam_assassin", "enron"]:
         if name not in data_dict:
@@ -396,13 +394,8 @@ def run_training_size_experiments(combined_df: pd.DataFrame, test_fraction: floa
     Training-size experiment (combined dataset):
 
       - Fix 30% of the *entire* dataset as the test set.
-      - Train on 10%, 20%, ..., 70% of the *entire* dataset.
+      - Train on 10%, 20%, ..., 60% of the *entire* dataset.
         (All training subsets are sampled from the remaining 70%.)
-
-      Example:
-        N = 100k
-        test = 30k (fixed)
-        train sizes: 10k, 20k, ..., 70k (all drawn from the same 70k pool)
     """
     results = []
 
@@ -469,7 +462,7 @@ def run_training_size_experiments(combined_df: pd.DataFrame, test_fraction: floa
 
 # ========= PLOTTING FOR TRAINING-SIZE =========
 def plot_training_size_curves(train_size_rows):
-    """Create convenience plots of performance vs training fraction."""
+    # Plot F1 and accuracy vs training size (combined dataset)
     if not train_size_rows:
         print("[Training-size] No rows to plot.")
         return
@@ -479,7 +472,6 @@ def plot_training_size_curves(train_size_rows):
 
     xs = df["train_frac_total"] * 100.0  # percentage of entire dataset
 
-    # Plot F1 and accuracy
     fig, ax = plt.subplots(1, 2, figsize=(10, 4))
 
     ax[0].plot(xs, df["f1"], marker="o")
