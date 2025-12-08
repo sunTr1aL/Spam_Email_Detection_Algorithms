@@ -14,7 +14,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
 
 # -----------------------------------------------------
-#  IMPORT your main project functions & paths
+#  IMPORT main project functions & paths
 # -----------------------------------------------------
 from baselines import (
     DIR_EXP, DIR_SUM,
