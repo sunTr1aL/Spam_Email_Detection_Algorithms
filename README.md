@@ -18,8 +18,8 @@ This repository provides a full framework for **spam email detection** and exper
   - Linear SVM
 #
 - 🤖 **Transformer-Based Classifiers**
-  - **DistilBERT + LoRA** (this repo)
-  - **RoBERTa** (same repo, in `roberta_output/`)
+  - **DistilBERT + LoRA**
+  - **RoBERTa**
 #
 - 📈 **Automated Reporting**
   - Evaluation metrics (accuracy, precision, recall, F1) as CSV files.
@@ -325,6 +325,7 @@ Special thanks to the maintainers and contributors of:
 #
 Gratitude also goes to the broader open-source community for providing tools, documentation,
 and datasets that make NLP research accessible to everyone.
+
 
 
 
