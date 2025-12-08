@@ -318,14 +318,6 @@ Earlier iterations also wrote BERT metrics into
 data/experiments/summary/baseline_metrics_bert.csv;
 the current layout uses bert_output/summary/* instead.
 ---
-## 🤝 RoBERTa Experiments
-This repository focuses on traditional models and DistilBERT+LoRA.
-Additional Transformer experiments using RoBERTa (including code and results) are hosted in a
-separate repository:
-🔗 https://github.com/yueqiangwu/CS409_final_project
-That repo extends the same overall idea — spam classification with modern Transformers — using a
-different architecture and potentially different hyperparameters.
----
 ## ⭐ Acknowledgments
 This project builds upon the work of several open-source projects and public datasets.
 Special thanks to the maintainers and contributors of the following:
