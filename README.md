@@ -175,6 +175,7 @@ source .venv/bin/activate      # Linux/macOS
 pip install -r requirements.txt  # or install sklearn, nltk, bs4, matplotlib, etc.
 #
 python code/baselines.py
+python code/extra_evals.py
 ```
 #
 This will:
@@ -329,4 +330,5 @@ Special thanks to the maintainers and contributors of:
 #
 Gratitude also goes to the broader open-source community for providing tools, documentation,
 and datasets that make NLP research accessible to everyone.
+
 
