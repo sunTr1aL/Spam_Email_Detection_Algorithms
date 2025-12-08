@@ -1,0 +1,7 @@
+model,exp_group,split,tag,train_dataset,test_dataset,n_train,n_test,train_frac_pool,train_frac_total,acc,prec,recall,f1
+DistilBERT_LoRA,cross,cross,cross_spam_assassin_to_enron,spam_assassin,enron,5794,33775,1.0,1.0,0.5051961509992599,0.5067361420588941,0.8641917567962584,0.6388624773100527
+DistilBERT_LoRA,cross,cross,cross_spam_assassin_to_trec2007,spam_assassin,trec2007,5794,80774,1.0,1.0,0.7882982147720802,0.8196727675018923,0.8439479626706101,0.831633255878067
+DistilBERT_LoRA,cross,cross,cross_enron_to_spam_assassin,enron,spam_assassin,33775,5794,1.0,1.0,0.36503279254401105,0.33536247924737134,0.9598732840549102,0.49706083390293915
+DistilBERT_LoRA,cross,cross,cross_enron_to_trec2007,enron,trec2007,33775,80774,1.0,1.0,0.7869240102013024,0.7780789429103846,0.9178473651605683,0.8422037021756471
+DistilBERT_LoRA,cross,cross,cross_trec2007_to_spam_assassin,trec2007,spam_assassin,80774,5794,1.0,1.0,0.6901967552640663,0.514302224790523,0.9398099260823654,0.6647992530345471
+DistilBERT_LoRA,cross,cross,cross_trec2007_to_enron,trec2007,enron,80774,33775,1.0,1.0,0.7449296817172465,0.6781517542387108,0.9446945337620579,0.7895341167273349
