@@ -1,7 +1,3 @@
-📧 Spam Email Detection Project
-
-This project is the GitHub repository for **CS410 Final Project (Group 52)** at UIUC.
----
 #
 ## 🧠 Overview
 #
@@ -325,6 +321,7 @@ Special thanks to the maintainers and contributors of:
 #
 Gratitude also goes to the broader open-source community for providing tools, documentation,
 and datasets that make NLP research accessible to everyone.
+
 
 
 
