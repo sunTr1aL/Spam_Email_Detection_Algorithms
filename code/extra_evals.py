@@ -14,7 +14,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
 
 # -----------------------------------------------------
-#  IMPORT your main project functions & paths
+#  IMPORT main project functions & paths
 # -----------------------------------------------------
 from baselines import (
     DIR_EXP, DIR_SUM,
@@ -197,3 +197,4 @@ if __name__ == "__main__":
         run_learning_curve(data[key], tag_prefix=key)
 
     print("\nAll extra evaluations completed.")
+
