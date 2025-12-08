@@ -1,10 +1,5 @@
 # 📧 Spam Email Detection Project
 This project is the GitHub repository for CS410 Final Project (Group 52) at UIUC.
-A comprehensive spam classification pipeline combining traditional NLP models
-(Naive Bayes, Logistic Regression, Linear SVM) with modern deep learning
-(DistilBERT and RoBERTa).
-The project performs full-cycle data processing: loading → cleaning → vectorization → modeling → evaluation,
-complete with EDA reports, per-user analysis, and confusion matrices.
 ---
 ## 🧠 Overview
 This repository provides a framework for spam email detection and experimentation. It includes:
