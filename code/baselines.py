@@ -22,10 +22,13 @@ from typing import Dict
 from bs4 import BeautifulSoup
 
 # ========= ROOT & FOLDERS =========
-DATA_ROOT = r"D:\cs 410\final project\data"
+# Get the absolute path to the project root (parent of code/)
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
+DATA_ROOT = os.path.join(PROJECT_ROOT, "data")
 
-DIR_RAW   = os.path.join(DATA_ROOT, "raw")
-DIR_PROC  = os.path.join(DATA_ROOT, "processed")
+DIR_RAW   = os.path.join(DATA_ROOT, "raw_data")
+DIR_PROC  = os.path.join(DATA_ROOT, "processed_data")
 DIR_EDA   = os.path.join(DATA_ROOT, "eda")
 DIR_EXP   = os.path.join(DATA_ROOT, "experiments")
 DIR_RS    = os.path.join(DIR_EXP, "random_split")

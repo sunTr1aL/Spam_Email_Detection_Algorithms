@@ -1,9 +1,11 @@
 import os
 import torch
 
-# Paths
-DATA_DIR = os.path.abspath("../../data/processed_data")  # Project/data/processed_data/
-OUTPUT_DIR = os.path.abspath("../../roberta_output")  # Project/roberta_output/
+# Paths - use __file__ to resolve relative to this script's location
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))  # Go up two levels from code/roberta/
+DATA_DIR = os.path.join(PROJECT_ROOT, "data", "processed_data")
+OUTPUT_DIR = os.path.join(PROJECT_ROOT, "roberta_output")
 
 # Datasets
 DATASETS = ["enron", "spam_assassin", "trec2007"]
